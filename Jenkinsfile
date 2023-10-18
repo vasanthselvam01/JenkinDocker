@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build Maven') {
             when {
-                expression { env.GIT_BRANCH == 'develop1' }
+                expression { env.GIT_BRANCH == 'develop' }
             }
             steps {
                sh "mvn clean"
