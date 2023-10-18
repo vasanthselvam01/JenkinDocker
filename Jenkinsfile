@@ -13,7 +13,7 @@ pipeline {
             steps {
                echo 'hello Jenkisnfile'
                echo 'Pulling... ' + env.GIT_BRANCH.split("/")[1]
-               echo env.DISABLE_AUTH
+               echo 'environment variable ' +env.DISABLE_AUTH
             }
         }
 
