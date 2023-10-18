@@ -9,7 +9,7 @@ pipeline {
         stage('Initialize') {
             steps {
                sh "echo hello"
-               echo 'Pulling... ' + env.GIT_BRANCH.split("\\*/")[1]
+               echo 'Pulling... ' + env.GIT_BRANCH.split("/")[1]
             }
         }
 
