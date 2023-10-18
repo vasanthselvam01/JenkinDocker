@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        DISABLE_AUTH = 'true'
+       }
     tools {
         maven 'MAVEN'
     }
@@ -8,14 +11,15 @@ pipeline {
     stages {
         stage('Initialize') {
             steps {
-               sh "echo hello"
+               echo 'hello Jenkisnfile'
                echo 'Pulling... ' + env.GIT_BRANCH.split("/")[1]
+               echo env.DISABLE_AUTH
             }
         }
 
         stage('Build Maven') {
             when {
-                expression { env.GIT_BRANCH == 'develop' }
+                expression { env.GIT_BRANCH.split("/")[1] == 'develop1' }
             }
             steps {
                sh "mvn clean"
