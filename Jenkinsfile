@@ -17,7 +17,7 @@ pipeline {
                echo 'hello Jenkisnfile'
                echo 'Pulling... ' + env.GIT_BRANCH.split("/")[1]
                echo 'environment variable ' +env.DISABLE_AUTH
-               echo "BRANCH_NAME  ${env.FILENAME}"
+               echo "BRANCH_NAME  ${env.BRANCH_NAME}"
             }
         }
 
