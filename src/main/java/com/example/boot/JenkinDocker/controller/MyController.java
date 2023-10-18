@@ -8,6 +8,6 @@ public class MyController {
 
     @GetMapping(value = "/city")
     public String getCities() {
-        return "Chennai City, TN, IN.";
+        return "Chennai City, TN, IN";
     }
 }
