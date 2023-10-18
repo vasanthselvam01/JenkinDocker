@@ -9,6 +9,7 @@ pipeline {
         stage('Initialize') {
             steps {
                sh "echo hello"
+               echo 'Pulling... ' + env.GIT_BRANCH
             }
         }
 
